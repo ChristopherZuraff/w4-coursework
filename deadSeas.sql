@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS pirates;
+DROP TABLE IF EXISTS ships;
+DROP TABLE IF EXISTS quests;
+DROP TABLE IF EXISTS shoulderPets;
+DROP VIEW IF EXISTS pirate_booty;
+
+CREATE TABLE IF NOT EXISTS pirates(
+pirateId INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+rank TEXT,
+questId INTEGER,
+numberOfMissingLimbs INTEGER,
+shoulderPetId INTEGER,
+shipId INTEGER,
+scurvyness INTEGER,
+bounty TEXT );
+
+CREATE TABLE IF NOT EXISTS ships(
+shipId INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+class TEXT,
+durability INTEGER,
+numCrew INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS quests(
+questId INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+givenBy TEXT,
+cursed TEXT,
+reward TEXT,
+risk TEXT
+);
+
+CREATE TABLE IF NOT EXISTS shoulderPets(
+shoulderPetId INTEGER PRIMARY KEY AUTOINCREMENT,
+typeOfAnimal TEXT,
+isDead TEXT,
+phrase TEXT,
+name TEXT);
+
