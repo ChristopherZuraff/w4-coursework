@@ -9,3 +9,6 @@ WHERE Country LIKE "Brazil" OR Country LIKE "USA";
 
 SELECT * FROM albums
 WHERE title LIKE "a%";
+
+SELECT * FROM playlists
+WHERE Name NOT LIKE "Music"And Name NOT LIKE "Movies";
